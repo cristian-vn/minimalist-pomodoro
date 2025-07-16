@@ -1,0 +1,113 @@
+@import url('https://fonts.cdnfonts.com/css/digital-7-mono');
+
+:root {
+	font-family: Inter, sans-serif;
+	font-feature-settings: 'liga' 1, 'calt' 1;
+
+    --bg-primary-color: #0a0a0a;
+    --bg-secondary-color: #171717;
+    --primary: #737373;
+    --fg-primary-color: #fafafa;
+    --fg-secondary-color: #a3a3a3;
+}
+
+@supports (font-variation-settings: normal) {
+	:root {
+        font-family: InterVariable, sans-serif;
+	}
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+        
+body {
+    width: 300px;
+    /*
+    height: 200px;*/
+    background: var(--bg-primary-color);
+}
+
+section, footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section *{
+    display: block;
+    padding: 8px;
+}
+
+h1{
+    font-size: 16px;
+}
+
+svg{
+    width: 16px;
+    height: 16px;
+}
+
+button{
+    min-width: 70px;
+    padding: 7px 9px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    padding: 50px;
+    padding-bottom: 25px;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circular-progress{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: conic-gradient(var(--fg-primary-color) 3.6deg, var(--primary) 1deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: var(--bg-primary-color);
+}
+
+footer{
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+#timer{
+    position: relative;
+    font-size: 56px;
+    color: var(--fg-primary-color);
+    font-family: 'Digital-7 Mono', sans-serif;
+}
+
+#state{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--fg-secondary-color);
+}
+
+#actions{
+    display: flex;
+    gap: 10px;
+}
